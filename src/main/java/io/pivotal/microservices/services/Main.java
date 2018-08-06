@@ -1,7 +1,9 @@
 package io.pivotal.microservices.services;
 
 import io.pivotal.microservices.services.accounts.AccountsServer;
+import io.pivotal.microservices.services.psa.PsaServer;
 import io.pivotal.microservices.services.registration.RegistrationServer;
+import io.pivotal.microservices.services.report.ReportServer;
 import io.pivotal.microservices.services.web.WebServer;
 
 /**
@@ -36,6 +38,10 @@ public class Main {
 			RegistrationServer.main(args);
 		} else if (serverName.equals("accounts")) {
 			AccountsServer.main(args);
+		} else if (serverName.equals("psa")) {
+			PsaServer.main(args);
+		} else if (serverName.equals("report")) {
+			ReportServer.main(args);
 		} else if (serverName.equals("web")) {
 			WebServer.main(args);
 		} else {
